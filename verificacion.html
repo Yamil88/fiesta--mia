@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Acceso - Fiesta de MIA</title><style>
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Caja */
+.contenedor {
+  text-align: center;
+}
+
+/* Texto */
+h1 {
+  color: gold;
+}
+
+/* Loader */
+.loader {
+  border: 6px solid #333;
+  border-top: 6px solid gold;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 20px auto;
+  animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Oculto */
+#resultado {
+  display: none;
+}
+
+/* Check */
+.check {
+  font-size: 60px;
+  color: #00ff88;
+  margin-top: 20px;
+}
+</style></head><body><div class="contenedor">  <!-- Pantalla 1 -->  <div id="verificando">
+    <h1>🎟️ Verificando acceso...</h1>
+    <div class="loader"></div>
+  </div>  <!-- Pantalla 2 -->  <div id="resultado">
+    <h1>🎉 Fiesta de MIA 🎉</h1>
+    <div class="check">✔</div>
+    <p>ACCESO AUTORIZADO</p>
+  </div></div><script>
+setTimeout(() => {
+  document.getElementById("verificando").style.display = "none";
+  document.getElementById("resultado").style.display = "block";
+}, 3000);
+</script></body>
+</html>
