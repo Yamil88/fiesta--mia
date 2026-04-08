@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Fiesta de MIA</title><style>
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #ff9ad5, #ff66b2);
+}
+
+/* Título */
+h1 {
+  margin-top: 60px;
+  font-size: 42px;
+}
+
+/* Info */
+.info {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+/* Contador */
+#contador {
+  font-size: 28px;
+  margin-top: 25px;
+  background: rgba(255,255,255,0.2);
+  display: inline-block;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* Firma */
+.firma {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* Corazones */
+.corazon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  transform: rotate(45deg);
+  animation: flotar 6s linear infinite;
+}
+
+.corazon::before,
+.corazon::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  border-radius: 50%;
+}
+
+.corazon::before {
+  top: -10px;
+}
+
+.corazon::after {
+  left: -10px;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(100vh) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+</style></head><body><h1>🎉 Fiesta de MIA 🎉</h1><div class="info">📍 Ubicación: Casa de mi Abi</div>
+<div class="info">💖 P.D. Ven vestido de rosa 💖</div><h2>Cuenta regresiva</h2><div id="contador"></div><div class="firma">HECHO POR YAMIL☆</div><!-- Música --><audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+</audio><script>
+// Fecha
+const fechaObjetivo = new Date("April 14, 2026 16:00:00").getTime();
+
+// Contador
+const contador = setInterval(() => {
+  const ahora = new Date().getTime();
+  const diferencia = fechaObjetivo - ahora;
+
+  if (diferencia <= 0) {
+    clearInterval(contador);
+    document.getElementById("contador").innerHTML = "💖 ¡Ya empezó la fiesta de MIA! 💖";
+    return;
+  }
+
+  const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+  const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+  const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+  const segundos = Math.floor((diferencia / 1000) % 60);
+
+  document.getElementById("contador").innerHTML =
+    dias + " días 💕 " +
+    horas + " horas 💕 " +
+    minutos + " minutos 💕 " +
+    segundos + " segundos";
+}, 1000);
+
+// Corazones
+function crearCorazon() {
+  const corazon = document.createElement("div");
+  corazon.classList.add("corazon");
+
+  corazon.style.left = Math.random() * 100 + "vw";
+  corazon.style.animationDuration = (Math.random() * 3 + 3) + "s";
+
+  document.body.appendChild(corazon);
+
+  setTimeout(() => {
+    corazon.remove();
+  }, 6000);
+}
+
+setInterval(crearCorazon, 300);
+</script></body>
+</html>
