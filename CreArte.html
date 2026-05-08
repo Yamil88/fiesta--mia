@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CREA ARTE 🎨</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Baloo 2', cursive;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#fff6f9,#f0fbff,#f7f0ff);
+overflow-x:hidden;
+color:#444;
+}
+
+/* MANCHAS */
+
+.paint{
+position:fixed;
+border-radius:50%;
+filter:blur(15px);
+opacity:.4;
+z-index:-1;
+animation:float 10s infinite ease-in-out;
+}
+
+.paint1{
+width:250px;
+height:250px;
+background:#ffc7df;
+top:-50px;
+left:-80px;
+}
+
+.paint2{
+width:300px;
+height:300px;
+background:#c8f5ff;
+bottom:-80px;
+right:-80px;
+animation-delay:2s;
+}
+
+.paint3{
+width:200px;
+height:200px;
+background:#dcc7ff;
+top:40%;
+left:40%;
+animation-delay:4s;
+}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(25px);}
+100%{transform:translateY(0px);}
+}
+
+/* MENU */
+
+.menu-btn{
+position:fixed;
+top:20px;
+right:20px;
+width:55px;
+height:55px;
+background:white;
+border-radius:15px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:2rem;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+z-index:1000;
+transition:.3s;
+}
+
+.menu-btn:hover{
+transform:scale(1.08);
+}
+
+.menu{
+position:fixed;
+top:90px;
+right:-300px;
+width:250px;
+background:rgba(255,255,255,.9);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+display:flex;
+flex-direction:column;
+gap:15px;
+transition:.4s;
+z-index:999;
+}
+
+.menu.active{
+right:20px;
+}
+
+.menu a{
+text-decoration:none;
+color:#555;
+font-size:1.1rem;
+padding:12px;
+border-radius:15px;
+transition:.3s;
+background:#fff;
+}
+
+.menu a:hover{
+background:#ffe4f1;
+transform:translateX(5px);
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.logo{
+width:280px;
+max-width:90%;
+margin-bottom:20px;
+animation:show 2s ease;
+}
+
+@keyframes show{
+0%{
+opacity:0;
+transform:scale(.7);
+}
+100%{
+opacity:1;
+transform:scale(1);
+}
+}
+
+h1{
+font-size:4rem;
+color:#ff69b4;
+margin-bottom:10px;
+}
+
+.slogan{
+font-size:1.5rem;
+margin-bottom:25px;
+color:#666;
+}
+
+.desc{
+max-width:800px;
+font-size:1.2rem;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+/* BOTON */
+
+.whatsapp{
+background:#25D366;
+padding:18px 35px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-size:1.2rem;
+font-weight:bold;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.08);
+}
+
+/* SECCIONES */
+
+.section{
+padding:80px 20px;
+display:flex;
+justify-content:center;
+}
+
+.box{
+background:rgba(255,255,255,.65);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:35px;
+max-width:1000px;
+width:100%;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.box h2{
+font-size:2.8rem;
+text-align:center;
+margin-bottom:35px;
+color:#ff69b4;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:25px;
+margin-bottom:25px;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+font-size:1.8rem;
+margin-bottom:10px;
+color:#8a5cff;
+}
+
+.card p{
+font-size:1.1rem;
+line-height:1.7;
+}
+
+.list{
+display:grid;
+gap:20px;
+}
+
+.list div{
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+font-size:1.1rem;
+}
+
+/* FOOTER */
+
+footer{
+padding:40px;
+text-align:center;
+font-size:1rem;
+color:#666;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+h1{
+font-size:3rem;
+}
+
+.slogan{
+font-size:1.2rem;
+}
+
+.desc{
+font-size:1rem;
+}
+
+.box h2{
+font-size:2.1rem;
+}
+
+.card h3{
+font-size:1.5rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MANCHAS -->
+<div class="paint paint1"></div>
+<div class="paint paint2"></div>
+<div class="paint paint3"></div>
+
+<!-- BOTON MENU -->
+<div class="menu-btn" onclick="toggleMenu()">
+☰
+</div>
+
+<!-- MENU -->
+<div class="menu" id="menu">
+
+<a href="#inicio">🏠 Inicio</a>
+
+<a href="#servicios">🌟 Servicios</a>
+
+<a href="#sobre">👩‍🎨 Sobre</a>
+
+<a href="#porque">💎 ¿Por qué elegirnos?</a>
+
+<a href="#estilo">🎨 Estilo visual</a>
+
+<a href="#contacto">📞 Contacto</a>
+
+</div>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+
+<!-- CAMBIA logo.png POR TU LOGO -->
+<img src="logo.png" class="logo">
+
+<h1>🎨 CREA ARTE 🎨</h1>
+
+<p class="slogan">
+“SI LO SUEÑAS ES POSIBLE ✨”
+</p>
+
+<p class="desc">
+🖌️ Convertimos ideas simples en diseños impactantes, modernos y elegantes.
+En CREA ARTE 🎨 nos especializamos en crear publicidad visual con estilo profesional, colores armoniosos y acabados premium que hacen destacar cualquier proyecto, negocio o evento ✨
+</p>
+
+<a
+class="whatsapp"
+href="https://wa.me/525660594735?text=HOLA%20ESTOY%20INTERESADO%20EN%20CREAR%20ARTE%20🎨🖌️"
+target="_blank"
+>
+💚 WhatsApp
+</a>
+
+</section>
+
+<!-- SERVICIOS -->
+<section class="section" id="servicios">
+
+<div class="box">
+
+<h2>🌟 SERVICIOS DISPONIBLES 🌟</h2>
+
+<div class="list">
+
+<div>🖼️ Flyers publicitarios modernos y llamativos.</div>
+
+<div>📌 Posters profesionales con estilo elegante y minimalista.</div>
+
+<div>💳 Tarjetas personalizadas para negocios y emprendimientos.</div>
+
+<div>📚 Menús y catálogos organizados y premium.</div>
+
+<div>💼 Presentaciones profesionales limpias y visuales.</div>
+
+<div>🌐 Sitios web modernos y atractivos.</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SOBRE -->
+<section class="section" id="sobre">
+
+<div class="box">
+
+<h2>👩‍🎨 Sobre CREA ARTE ✨</h2>
+
+<div class="card">
+
+<h3>🌈 MISIÓN</h3>
+
+<p>
+Inspirar a las personas a expresar su creatividad mediante diseños modernos, elegantes y visualmente impactantes ✨
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🎯 VISIÓN</h3>
+
+<p>
+Convertirse en un espacio creativo reconocido por su estilo premium, minimalista y profesional 🎨
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💕 ESENCIA DE CREA ARTE</h3>
+
+<p>
+CREA ARTE representa creatividad, imaginación y estilo visual elegante. Cada diseño busca transmitir profesionalismo y originalidad ✨
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PORQUE -->
+<section class="section" id="porque">
+
+<div class="box">
+
+<h2>💎 ¿POR QUÉ ELEGIR CREA ARTE? 💎</h2>
+
+<div class="list">
+
+<div>✨ Diseños modernos y minimalistas</div>
+
+<div>✨ Apariencia elegante y profesional</div>
+
+<div>✨ Atención personalizada</div>
+
+<div>✨ Creatividad y originalidad</div>
+
+<div>✨ Diseños listos para imprimir o publicar</div>
+
+<div>✨ Colores suaves y premium</div>
+
+<div>✨ Acabados tipo marca profesional</div>
+
+<div>✨ Calidad y detalle en cada proyecto</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ESTILO -->
+<section class="section" id="estilo">
+
+<div class="box">
+
+<h2>🎨 ESTILO VISUAL 🎨</h2>
+
+<div class="list">
+
+<div>🌸 Colores pasteles elegantes</div>
+
+<div>🤍 Blanco, beige, rosa pastel y lila</div>
+
+<div>✨ Diseño limpio y organizado</div>
+
+<div>🖌️ Elementos minimalistas y modernos</div>
+
+<div>💼 Apariencia profesional y exclusiva</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+<section class="section" id="contacto">
+
+<div class="box">
+
+<h2>📞 CONTACTO 📞</h2>
+
+<div class="list">
+
+<div>📱 WhatsApp: 5660594735</div>
+
+<div>⏰ Horario: Variable</div>
+
+<div>✨ Atención personalizada</div>
+
+<div>✨ Diseños premium y creativos</div>
+
+<div>✨ Calidad en cada detalle</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+🎀 CREA ARTE 🎀 <br>
+Diseñando creatividad con estilo profesional ✨
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+
+document.getElementById("menu").classList.toggle("active");
+
+}
+
+</script>
+
+</body>
+</html>
