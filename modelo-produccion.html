@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modelo de Producción Actual</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#dfe9f3,#ffffff);
+    color:#333;
+    overflow-x:hidden;
+}
+
+header{
+    background:#1f4e79;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+    animation: aparecer 2s;
+}
+
+header h1{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:20px;
+}
+
+.contenedor{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:30px 0;
+}
+
+.card{
+    background:white;
+    margin:25px 0;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:scale(1.03);
+    background:#eef6ff;
+}
+
+.card h2{
+    color:#1f4e79;
+    margin-bottom:15px;
+}
+
+.card p{
+    display:none;
+    font-size:18px;
+    line-height:1.6;
+}
+
+footer{
+    background:#1f4e79;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+    font-size:18px;
+}
+
+.boton{
+    display:block;
+    margin:20px auto;
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:#1f4e79;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.boton:hover{
+    background:#163955;
+    transform:scale(1.05);
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Modelo de Producción Actual</h1>
+    <p>Cuidado del agua y la biodiversidad</p>
+</header>
+
+<div class="contenedor">
+
+    <button class="boton" onclick="mostrarTodo()">
+        Mostrar / Ocultar Respuestas
+    </button>
+
+    <div class="card">
+        <h2>1. ¿Por qué no es compatible?</h2>
+        <p>
+            El modelo de producción actual no es compatible porque contamina el agua,
+            destruye la biodiversidad y afecta gravemente al medio ambiente.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>2. Problemas de la agricultura intensiva</h2>
+        <p>
+            La agricultura intensiva contamina ríos y lagunas con agroquímicos
+            y provoca la pérdida de especies naturales.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>3. Efectos de la ganadería intensiva</h2>
+        <p>
+            La ganadería intensiva afecta la salud humana porque el uso excesivo
+            de antibióticos crea bacterias resistentes y genera contaminación.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>4. Propuestas de solución</h2>
+        <p>
+            Los autores proponen usar agricultura orgánica, cuidar el agua,
+            proteger la biodiversidad y producir de forma sustentable.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>5. ¿Por qué existe la crisis alimentaria?</h2>
+        <p>
+            La crisis alimentaria existe porque las personas permiten modelos
+            de producción que dañan al planeta y desperdician recursos.
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    ✨ Hecho por Yamil ✨
+</footer>
+
+<script>
+function mostrarTodo(){
+    let textos = document.querySelectorAll(".card p");
+
+    textos.forEach(texto => {
+        if(texto.style.display === "block"){
+            texto.style.display = "none";
+        }else{
+            texto.style.display = "block";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
