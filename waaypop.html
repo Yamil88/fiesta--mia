@@ -1,0 +1,336 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waay Pop</title>  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #fef9c3, #bae6fd, #ddd6fe, #fbcfe8, #ffffff);
+      color: #111827;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, rgba(6,182,212,0.25), rgba(168,85,247,0.25));
+      border-bottom: 2px solid #67e8f9;
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, rgba(103,232,249,0.45), rgba(192,132,252,0.45));
+    }
+
+    header h1 {
+      text-shadow: 0 0 15px rgba(255,255,255,0.8);
+      font-size: 60px;
+      color: #67e8f9;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      max-width: 800px;
+      margin: auto;
+      color: #374151;
+      font-size: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      border-radius: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #67e8f9;
+      color: black;
+    }
+
+    .btn-primary:hover {
+      background: white;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #67e8f9;
+      font-size: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(8px);
+      padding: 25px;
+      border-radius: 20px;
+      border: 1px solid #93c5fd;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 25px rgba(103,232,249,0.7);
+      transform: translateY(-10px);
+      border-color: #67e8f9;
+    }
+
+    .card h3 {
+      color: #a5f3fc;
+      margin-bottom: 15px;
+    }
+
+    .timeline {
+      border-left: 4px solid #67e8f9;
+      padding-left: 20px;
+      margin-top: 40px;
+    }
+
+    .timeline div {
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 20px;
+      height: 250px;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .quiz {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .quiz button {
+      margin: 10px;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 15px;
+      background: #27272a;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+
+    .quiz button:hover {
+      transform: scale(1.08);
+      background: #67e8f9;
+      color: black;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #3f3f46;
+      color: #a1a1aa;
+    }
+  </style></head><body>  <header>
+    <h1>WAAY POP</h1>
+    <h3 style="color:#c084fc; margin-top:-10px; font-size:28px;">La Leyenda Maya del Terror Nocturno</h3>
+    <p>
+      La misteriosa criatura de la mitología maya yucateca.
+      Descubre su origen, poderes y el impacto cultural de esta leyenda ancestral.
+    </p><a href="#historia" class="btn btn-primary">Explorar Leyenda</a>
+
+  </header>  <section id="historia">
+    <h2>¿Qué es el Waay Pop?</h2><p style="text-align:center; max-width:900px; margin:auto; color:#d4d4d8; font-size:18px;">
+  El Waay Pop es una criatura de la mitología maya relacionada con la brujería,
+  los espíritus y las transformaciones sobrenaturales.
+  Se describe como un enorme ser mitad humano y mitad ave que aparecía durante la noche.
+</p>
+
+<div class="cards">
+  <div class="card">
+    <h3>🧙 Origen</h3>
+    <p>
+      Se decía que originalmente era un humano o sacerdote que aprendió magia oscura.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>🌙 Apariciones</h3>
+    <p>
+      Las leyendas afirman que aparecía después de medianoche sobrevolando pueblos.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>⚡ Poderes</h3>
+    <p>
+      Poseía habilidades sobrenaturales, enormes alas y aterradoras garras.
+    </p>
+  </div>
+</div>
+
+  </section>  <section>
+    <h2>Evolución de la Leyenda</h2><div class="timeline">
+  <div>
+    <h3>Civilización Maya</h3>
+    <p>Los Waayo'ob eran considerados seres espirituales y cambiaformas.</p>
+  </div>
+
+  <div>
+    <h3>Época Colonial</h3>
+    <p>Las creencias mayas comenzaron a relacionarse con demonios y magia oscura.</p>
+  </div>
+
+  <div>
+    <h3>Actualidad</h3>
+    <p>La leyenda continúa viva en comunidades del sureste mexicano.</p>
+  </div>
+</div>
+
+  </section>  <section>
+    <h2>Encuesta Interactiva</h2><div style="text-align:center; margin-bottom:30px;">
+  <button onclick="activarModoMisterio()" class="btn btn-primary">🌙 Activar Modo Misterio</button>
+</div>
+
+<div class="quiz">
+  <h3 style="margin-bottom:20px; color:#7c3aed;">¿Qué harías si vieras al Waay Pop?</h3>
+  <button onclick="mostrarMensaje('👀 Interesante... muchos creen en la leyenda.'); cambiarColor('#67e8f9')">Creo en la leyenda</button>
+
+  <button onclick="mostrarMensaje('📚 Tal vez sea solo un mito transmitido por generaciones.'); cambiarColor('#c084fc')">Es solo un mito</button>
+
+  <button onclick="mostrarMensaje('✨ Excelente, investigar culturas mayas es fascinante.'); cambiarColor('#34d399')">Quiero investigar más</button>
+</div>
+
+<p id="mensaje" style="text-align:center; margin-top:20px; color:#7c3aed; font-size:22px; font-weight:bold;"></p>
+
+<div style="text-align:center; margin-top:40px;">
+  <h3 style="color:#0f172a; margin-bottom:15px;">✨ Descubre tu conexión con el Waay Pop ✨</h3>
+
+  <button onclick="resultadoWaay('Guardián Nocturno 🪽')" class="btn btn-primary">Elegir destino</button>
+
+  <p id="resultado" style="margin-top:20px; font-size:24px; color:#4c1d95; font-weight:bold;"></p>
+</div>
+
+  </section>  <section>
+    <h2>POP WAAY</h2><div class="cards">
+  <div class="card" style="background:linear-gradient(135deg,#0f172a,#312e81); border:1px solid #818cf8;">
+    <h3>🪽 El Guardián del Mayab</h3>
+    <p>
+      Pop Waay representa la versión heroica inspirada en la leyenda del Waay Pop.
+      En lugar de causar miedo, protege a las personas y vigila los cielos nocturnos.
+    </p>
+  </div>
+
+  <div class="card" style="background:linear-gradient(135deg,#1e1b4b,#4c1d95); border:1px solid #c084fc;">
+    <h3>✨ Apariencia</h3>
+    <p>
+      Posee alas brillantes color azul y morado, armadura espiritual maya,
+      ojos luminosos y energía basada en la luz de la luna.
+    </p>
+  </div>
+
+  <div class="card" style="background:linear-gradient(135deg,#164e63,#1e3a8a); border:1px solid #67e8f9;">
+    <h3>⚡ Poderes</h3>
+    <p>
+      Puede controlar la energía nocturna, proteger aldeas mayas
+      y enfrentarse a criaturas oscuras del inframundo.
+    </p>
+  </div>
+</div>
+
+  </section>  <section>
+    <h2>Inspiración Visual</h2><div class="gallery">
+  <div class="card" style="text-align:center; background:linear-gradient(135deg,#93c5fd,#c4b5fd);">
+    <h3>🌿 Selvas del Mayab</h3>
+    <p>Los antiguos mayas relacionaban las selvas con espíritus y criaturas sobrenaturales.</p>
+  </div>
+  <div class="card" style="text-align:center; background:linear-gradient(135deg,#67e8f9,#818cf8);">
+    <h3>🪽 Waay Pop</h3>
+    <p>Un ser oscuro mitad humano y mitad ave que aparecía durante la noche.</p>
+  </div>
+
+  <div class="card" style="text-align:center; background:linear-gradient(135deg,#c084fc,#f9a8d4);">
+    <h3>🏛️ Cultura Maya</h3>
+    <p>La leyenda del Waay Pop forma parte del folclore yucateco y maya.</p>
+  </div>
+
+  <div class="card" style="text-align:center; background:linear-gradient(135deg,#f9a8d4,#fde68a);">
+    <h3>🌙 Noches Misteriosas</h3>
+    <p>Las historias cuentan que el Waay Pop aparecía después de medianoche.</p>
+  </div>
+</div>
+
+  </section>  <section>
+    <h2>Mini Juego</h2><div style="text-align:center;">
+  <p style="font-size:20px; margin-bottom:20px;">Haz clic para atrapar al Waay Pop 👀</p>
+
+  <button id="waayBtn" onclick="sumarPuntos()" style="padding:20px 30px; border:none; border-radius:20px; background:linear-gradient(135deg,#67e8f9,#c084fc); color:black; font-size:20px; cursor:pointer; transition:0.3s;">
+    🪽 WAAY POP
+  </button>
+
+  <h3 id="puntos" style="margin-top:20px; color:#7c3aed;">Puntos: 0</h3>
+</div>
+
+  </section>  <footer>
+    <h2 style="font-size:30px; color:#67e8f9; margin-bottom:10px;">HECHO POR YAMIL</h2>
+    <p>Proyecto educativo inspirado en la mitología maya yucateca • 2026</p>
+  </footer>  <script>
+    function mostrarMensaje(texto) {
+      document.getElementById('mensaje').innerHTML = texto;
+    }
+
+    function cambiarColor(color) {
+      document.body.style.background = `linear-gradient(to bottom, ${color}, #ffffff)`;
+    }
+
+    function activarModoMisterio() {
+      document.body.style.background = 'linear-gradient(to bottom, #1e1b4b, #312e81, #000000)';
+      document.body.style.color = 'white';
+      alert('🌙 Modo Misterio Activado');
+    }
+
+    function resultadoWaay(tipo) {
+      document.getElementById('resultado').innerHTML = 'Tu espíritu es: ' + tipo;
+    }
+
+    let puntos = 0;
+
+    function sumarPuntos() {
+      puntos++;
+      document.getElementById('puntos').innerHTML = 'Puntos: ' + puntos;
+
+      const btn = document.getElementById('waayBtn');
+      btn.style.transform = 'scale(1.2)';
+
+      setTimeout(() => {
+        btn.style.transform = 'scale(1)';
+      }, 200);
+    }
+    }
+  </script></body>
+</html>
