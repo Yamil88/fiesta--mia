@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>What Makes a Good Story?</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffd6f6,#dff8ff,#fff3b0);text-align:center}
+header{padding:25px}
+h1{font-size:3rem;color:#ff3f8e}
+.btn{background:#ff6ec7;color:white;padding:12px 20px;border-radius:20px;text-decoration:none;display:inline-block}
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:15px;padding:20px}
+.card,.quiz,.storybox,footer{background:white;border-radius:20px;box-shadow:0 4px 10px rgba(0,0,0,.2)}
+.card{width:220px;padding:15px}
+.quiz,.storybox{max-width:700px;margin:20px auto;padding:20px}
+footer{padding:20px;margin:20px}
+.dark{background:#222;color:white}
+.dark .card,.dark .quiz,.dark .storybox,.dark footer{background:#333;color:white}
+button,select{padding:10px 15px;border-radius:12px;margin:5px;cursor:pointer}
+</style>
+</head>
+<body>
+<header>
+<h1 id="title">📚 What Makes a Good Story?</h1>
+<a class="btn" href="https://yamil88.github.io/fiesta--mia/CreArte.html" target="_blank">🎨 Visit CREARTE</a><br><br>
+<select onchange="lang(this.value)">
+<option value="en">🇺🇸 English</option>
+<option value="es">🇪🇸 Español</option>
+<option value="ru">🇷🇺 Русский</option>
+</select>
+<button onclick="document.body.classList.toggle('dark')">🌙 Dark Mode</button>
+</header>
+
+<div class="grid">
+<div class="card"><h2 id="c1">Characters</h2><p id="p1">Interesting people, animals or creatures.</p></div>
+<div class="card"><h2 id="c2">Setting</h2><p id="p2">Where and when the story happens.</p></div>
+<div class="card"><h2 id="c3">Problem</h2><p id="p3">A challenge to solve.</p></div>
+<div class="card"><h2 id="c4">Events</h2><p id="p4">Actions and adventures.</p></div>
+<div class="card"><h2 id="c5">Ending</h2><p id="p5">A satisfying conclusion.</p></div>
+</div>
+
+<div class="quiz">
+<h2>🎮 Story Quiz</h2>
+<p id="q">What tells us where a story happens?</p>
+<button onclick="check(true)">Setting</button>
+<button onclick="check(false)">Character</button>
+<p id="result"></p>
+<hr>
+<h3>More Questions</h3>
+<ul style="text-align:left">
+<li>What is a character?</li>
+<li>Why is a problem important?</li>
+<li>What makes a good ending?</li>
+<li>What is the setting of a story?</li>
+<li>Why are events important?</li>
+</ul>
+</div>
+
+<div class="storybox">
+<h2>✨ Random Story Generator</h2>
+<button onclick="story()">Create Story</button>
+<p id="story"></p>
+</div>
+
+<footer>
+<h2>🎨 Made by CREARTE 💕</h2>
+<p>Developed by Yamilito & Valentina ✨</p>
+<p><a href="https://yamil88.github.io/fiesta--mia/CreArte.html">CREARTE Website</a></p>
+</footer>
+
+<script>
+function check(ok){document.getElementById('result').innerHTML=ok?'🎉 Correct!':'❌ Try Again!';}
+function story(){
+let c=['Dragon 🐉','Princess 👑','Pirate 🏴‍☠️','Cat 🐱','Wizard 🧙'];
+let s=['castle 🏰','forest 🌳','school 🏫','space 🚀','ocean 🌊'];
+let p=['lost a treasure 💎','saved a friend ❤️','found a mystery 🔍','fought a monster 👹'];
+document.getElementById('story').innerHTML=c[Math.floor(Math.random()*c.length)]+' in a '+s[Math.floor(Math.random()*s.length)]+' who '+p[Math.floor(Math.random()*p.length)];
+}
+function lang(v){
+const t={
+en:{title:'📚 What Makes a Good Story?',c1:'Characters',c2:'Setting',c3:'Problem',c4:'Events',c5:'Ending',p1:'Interesting people, animals or creatures.',p2:'Where and when the story happens.',p3:'A challenge to solve.',p4:'Actions and adventures.',p5:'A satisfying conclusion.'},
+es:{title:'📚 ¿Qué Hace Buena una Historia?',c1:'Personajes',c2:'Escenario',c3:'Problema',c4:'Eventos',c5:'Final',p1:'Personas, animales o criaturas interesantes.',p2:'Dónde y cuándo ocurre la historia.',p3:'Un desafío que resolver.',p4:'Acciones y aventuras.',p5:'Una conclusión satisfactoria.'},
+ru:{title:'📚 Что Делает Историю Хорошей?',c1:'Персонажи',c2:'Место',c3:'Проблема',c4:'События',c5:'Конец',p1:'Интересные люди, животные или существа.',p2:'Где и когда происходит история.',p3:'Проблема, которую нужно решить.',p4:'Действия и приключения.',p5:'Хороший финал.'}
+};
+document.getElementById('title').innerHTML=t[v].title;
+for(let i=1;i<=5;i++){document.getElementById('c'+i).innerHTML=t[v]['c'+i];document.getElementById('p'+i).innerHTML=t[v]['p'+i];}
+}
+</script>
+</body></html>
