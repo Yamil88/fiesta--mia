@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juego de Pelota Mesoamericano 🏛️⚽</title>
+
+<style>
+body{
+    font-family: Comic Sans MS, Arial, sans-serif;
+    background: linear-gradient(#ffd6e7,#d6f5ff,#e7ffd6);
+    padding:20px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,.15);
+}
+
+h1{
+    text-align:center;
+    color:#a855f7;
+}
+
+.card{
+    background:#fff7d6;
+    margin:15px 0;
+    padding:15px;
+    border-radius:15px;
+}
+
+.card:nth-child(even){
+    background:#d6f7ff;
+}
+
+button{
+    background:#ffb6c1;
+    border:none;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#ff9eb0;
+}
+
+#dato{
+    margin-top:10px;
+    font-weight:bold;
+    color:#7c3aed;
+}
+
+footer{
+    text-align:center;
+    margin-top:30px;
+    font-size:20px;
+    color:#ec4899;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🏛️⚽ Juego de Pelota Mesoamericano ⚽🏛️</h1>
+
+<p align="center">
+🌞📚🌵 Una tradición increíble de las culturas mesoamericanas 🌵📚🌞
+</p>
+
+<div class="card">
+<h2>🤔 ¿Qué es?</h2>
+<p>
+El juego de pelota mesoamericano fue una actividad deportiva,
+cultural y religiosa practicada por mayas, mexicas y otros pueblos.
+🏛️⚽✨
+</p>
+</div>
+
+<div class="card">
+<h2>🎯 Objetivos</h2>
+<ul>
+<li>⚽ Mantener la pelota en movimiento.</li>
+<li>🏆 Conseguir puntos.</li>
+<li>🤝 Trabajar en equipo.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>⚫ Características de la pelota</h2>
+<ul>
+<li>🖤 Hecha de hule.</li>
+<li>💪 Muy resistente.</li>
+<li>⚖️ Bastante pesada.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>👥 ¿Quiénes participan?</h2>
+<p>
+🙋‍♂️ Jugadores<br>
+🙋‍♀️ Equipos<br>
+🎉 Espectadores
+</p>
+</div>
+
+<div class="card">
+<h2>🏃 ¿Cómo se juega?</h2>
+<p>
+Los jugadores golpeaban la pelota principalmente con la cadera.
+🚫✋ No podían usar las manos.
+</p>
+</div>
+
+<div class="card">
+<h2>👕 Indumentaria</h2>
+<p>
+🛡️ Protectores de cadera<br>
+🦵 Rodilleras<br>
+🎽 Vestimenta especial
+</p>
+</div>
+
+<div class="card">
+<h2>🌟 Datos curiosos</h2>
+<p>
+🏛️ Es uno de los deportes más antiguos de América.<br>
+📜 En náhuatl se llama <b>Tlachtli</b>.<br>
+🌎 Se han encontrado muchas canchas antiguas.
+</p>
+</div>
+
+<div class="card">
+<h2>💡 Influencia en la actualidad</h2>
+<p>
+🎭 Conserva tradiciones culturales.<br>
+📚 Ayuda a conocer la historia.<br>
+⚽ Inspiró juegos modernos.
+</p>
+</div>
+
+<div class="card">
+<h2>💬 Frase cultural</h2>
+<p>
+✨ "Jugar es una manera en la que puedes aprender nuestra historia." ✨
+<br><br>
+— Enrique Salanic 🏛️
+</p>
+</div>
+
+<div class="card">
+<h2>🎲 Dato sorpresa</h2>
+
+<button onclick="mostrarDato()">
+🐱 Haz clic aquí 🐱
+</button>
+
+<p id="dato"></p>
+</div>
+
+<footer>
+😎🐱✨ HECHO POR YAMIL ✨🐱😎
+</footer>
+
+</div>
+
+<script>
+function mostrarDato(){
+const datos = [
+"⚽ La pelota estaba hecha de hule.",
+"🏛️ Algunas canchas tenían forma de I.",
+"📜 Tlachtli es el nombre en náhuatl.",
+"🌎 El juego tiene más de 3000 años de historia.",
+"🎉 Era un evento importante para la comunidad."
+];
+
+const aleatorio =
+datos[Math.floor(Math.random()*datos.length)];
+
+document.getElementById("dato").innerHTML = aleatorio;
+}
+</script>
+
+</body>
+</html>
