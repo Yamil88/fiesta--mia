@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ojo humano2</title>
+<style>
+body{font-family:Arial,sans-serif;background:#fff;color:#202124;margin:0}
+header{text-align:center;padding:20px}
+.logo{font-size:70px;font-weight:bold}
+.b{color:#4285F4}.r{color:#EA4335}.y{color:#FBBC05}.g{color:#34A853}
+.search{max-width:700px;margin:15px auto;padding:14px;border:1px solid #ddd;border-radius:30px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.tabs{text-align:center;color:#5f6368;padding-bottom:10px}
+.tabs span{margin:0 10px}
+.container{max-width:1000px;margin:auto;padding:15px}
+.card{border:1px solid #eaeaea;border-radius:12px;padding:18px;margin:15px 0}
+button{padding:10px 15px;border-radius:8px;border:1px solid #ccc;cursor:pointer}
+.crea{background:#4285F4;color:white;text-decoration:none;padding:10px 15px;border-radius:8px}
+#eye{font-size:70px;animation:blink 4s infinite}
+@keyframes blink{0%,45%,55%,100%{opacity:1}50%{opacity:.2}}
+</style>
+</head>
+<body>
+<header>
+<div id="eye">👁️</div>
+<div class="logo"><span class="b">V</span><span class="r">I</span><span class="y">S</span><span class="b">I</span><span class="g">O</span><span class="r">N</span></div>
+<div class="search">🔍 EL SENTIDO DE LA VISTA</div>
+<div class="tabs">
+<span>Todo</span><span>Imágenes</span><span>Videos</span><span>Noticias</span><span>Maps</span><span>Vuelos</span><span>Compras</span><span>Libros</span>
+</div>
+<p>Aproximadamente 8 resultados (0.02 segundos)</p>
+</header>
+
+<div class="container">
+<div class="card">
+<h2>👁️ ¿Qué es el sentido de la vista?</h2>
+<p>La vista permite percibir colores, formas, movimientos y distancias. El ojo capta la luz y el cerebro interpreta las imágenes.</p>
+</div>
+
+<div class="card">
+<h2>📸 Anatomía del ojo</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Schematic_diagram_of_the_human_eye_es.svg/800px-Schematic_diagram_of_the_human_eye_es.svg.png" width="100%">
+</div>
+
+<div class="card">
+<h2>🎮 Quiz con puntuación</h2>
+<p>¿Qué parte del ojo permite la entrada de la luz?</p>
+<button onclick="ok()">Pupila</button>
+<button onclick="bad()">Retina</button>
+<p id="quiz"></p>
+<p>Puntuación: <span id="score">0</span></p>
+</div>
+
+<div class="card">
+<h2>✅ Verdadero o Falso</h2>
+<p>Mirar al sol directamente es seguro.</p>
+<button onclick="document.getElementById('vf').innerHTML='❌ Incorrecto'">Verdadero</button>
+<button onclick="document.getElementById('vf').innerHTML='✅ Correcto'">Falso</button>
+<p id="vf"></p>
+</div>
+
+<div class="card">
+<h2>🎲 Dato curioso</h2>
+<button onclick="dato()">Mostrar</button>
+<p id="dato"></p>
+</div>
+
+<div class="card">
+<h2>🏆 Certificado</h2>
+<button onclick="cert()">Ver certificado</button>
+<p id="cert"></p>
+</div>
+
+<div class="card">
+<h2>🎨 CreArte</h2>
+<a class="crea" href="https://yamil88.github.io/fiesta--mia/CreArte.html" target="_blank">Visitar CreArte</a>
+</div>
+</div>
+
+<script>
+let s=0;
+function ok(){s++;document.getElementById('score').innerText=s;document.getElementById('quiz').innerHTML='🎉 Correcto';}
+function bad(){document.getElementById('quiz').innerHTML='❌ Intenta otra vez';}
+function dato(){
+const d=['👀 Distinguimos millones de colores','✨ Parpadeamos unas 15 veces por minuto','🌈 Cada iris es único','🧠 El cerebro interpreta las imágenes'];
+document.getElementById('dato').innerText=d[Math.floor(Math.random()*d.length)];
+}
+function cert(){
+document.getElementById('cert').innerHTML='🏆 Certificado: Experto en la Vista - Yamil';
+}
+</script>
+</body>
+</html>
