@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Manual Oficial de Supervivencia en Acapulco - Sara</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(180deg,#59c7ff,#fff4d8);color:#084c61}
+header{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover;color:#fff}
+button{padding:14px 22px;border:none;border-radius:30px;background:#00a8e8;color:#fff;font-size:18px;cursor:pointer}
+nav{position:sticky;top:0;background:#fff;padding:10px;display:flex;gap:10px;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+nav a{text-decoration:none;color:#0080b5;font-weight:bold}
+section{max-width:950px;margin:20px auto;background:#fff;border-radius:18px;padding:20px;box-shadow:0 5px 15px rgba(0,0,0,.15)}
+.card{background:#eefaff;border-radius:12px;padding:12px;margin:10px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+#certModal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);justify-content:center;align-items:center;padding:20px}
+#certModal img{max-width:90%;max-height:90%;border-radius:12px;box-shadow:0 0 20px #fff}
+.close{position:absolute;top:20px;right:20px;font-size:28px;color:#fff;cursor:pointer}
+footer{text-align:center;padding:30px}
+
+nav{overflow-x:auto;white-space:nowrap;padding:12px}
+nav a{display:inline-block;background:#00a8e8;color:white;padding:10px 16px;
+border-radius:25px;margin:4px;text-decoration:none;font-size:14px}
+header button{font-size:22px;padding:16px 28px}
+.logo{margin-top:25px;padding:18px;background:#ffffffcc;border-radius:16px;color:#0a5}
+</style>
+</head>
+<body>
+<header id="top">
+<h1>🌴 MANUAL OFICIAL DE SUPERVIVENCIA EN ACAPULCO 🌴</h1>
+<h2>🩵 Edición Especial para Sara 🩵</h2>
+<p>⚠️ Documento confidencial. Solo puede ser leído por personas que estén disfrutando sus vacaciones en Acapulco.</p>
+<button onclick="document.getElementById('kit').scrollIntoView({behavior:'smooth'})">📖 Presiona para ver tu manual</button>
+</header>
+<nav><a href="#top">🏠 Inicio</a><a href="#bienvenida">👋 Bienvenida</a><a href="#kit">🎒 Kit</a><a href="#reglas">☀️ Reglas</a><a href="#tips">🌊 Tips</a><a href="#misiones">🏖️ Misiones</a><a href="#peligro">🚨 Peligro</a><a href="#album">📸 Álbum</a><a href="#certificado">🏅 Diploma</a></nav>
+<section id="bienvenida">
+<h2>🌴 Bienvenida</h2>
+<p><strong>🩵 Edición Especial para Sara 🩵</strong></p>
+<p>⚠️ <b>Documento Confidencial</b></p>
+<p>Solo puede ser leído por personas que estén disfrutando sus vacaciones en Acapulco.</p>
+<p>¡Hola, Sara! Tu misión es divertirte, disfrutar, tomar muchas fotos, comer delicioso y sobrevivir al calor. 🌊☀️</p>
+</section>
+<section id="kit">
+<h2>🎒 Kit de supervivencia</h2>
+<div class="grid">
+<div class="card">🧴 Bloqueador</div>
+<div class="card">🕶️ Lentes</div>
+<div class="card">🩴 Sandalias</div>
+<div class="card">👙 Traje de baño</div>
+<div class="card">💧 Agua</div>
+<div class="card">📱 Celular</div>
+</div>
+</section>
+<section id="tips">
+<h2>🌊 Tips Oficiales</h2>
+<div class="card">🚿 Nunca te bañes con agua caliente después de la playa.</div>
+<div class="card">☀️ Ponte bloqueador cada 2 horas.</div>
+<div class="card">📸 Tómate muchas fotos.</div>
+<div class="card">🌅 No te pierdas un atardecer.</div>
+<div class="card">🥥 Prueba un coco frío.</div>
+<div class="card">😭 Disfruta cada minuto porque no querrás regresar.</div>
+</section>
+<section id="misiones">
+<h2>🏖️ Misiones</h2>
+<ul>
+<li>✅ Ver un atardecer.</li>
+<li>✅ Comer mariscos.</li>
+<li>✅ Entrar al mar.</li>
+<li>✅ Comprar un recuerdo.</li>
+<li>✅ Reír muchísimo.</li>
+</ul>
+</section>
+<section id="album">
+<h2>📸 Álbum de Recuerdos</h2>
+<p>Agrega hasta <b>5 fotos</b> de tus vacaciones.</p>
+<input accept="image/*" id="fotos" multiple="" type="file"/>
+<div id="galeria" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:15px;"></div>
+</section>
+<section id="certificado">
+<h2>🏅 Reconocimiento Oficial</h2>
+<p>Cuando pulses el botón aparecerá el diploma.</p>
+<button onclick="abrirCertificado()">🎉 Reclamar diploma</button>
+</section>
+<div id="certModal">
+<span class="close" onclick="cerrarCertificado()">✖</span>
+<img alt="Certificado" src="1000181525.png"/>
+</div>
+<footer>
+<div class="logo">
+<h2>🎨 Hecho por CreArte</h2>
+<p><i>Si lo sueñas es posible ✨</i></p>
+<p><a href="https://yamil88.github.io/fiesta--mia/CreArte.html" target="_blank">
+🌐 Visitar sitio web de CreArte
+</a></p>
+<p>Diseñado por Yamil 💚</p>
+</div>
+</footer>
+<script>
+function abrirCertificado(){
+ document.getElementById('certModal').style.display='flex';
+}
+function cerrarCertificado(){
+ document.getElementById('certModal').style.display='none';
+}
+
+document.getElementById('fotos')?.addEventListener('change',e=>{
+ const gal=document.getElementById('galeria');
+ gal.innerHTML='';
+ [...e.target.files].slice(0,5).forEach(f=>{
+   const r=new FileReader();
+   r.onload=x=>{
+      const img=document.createElement('img');
+      img.src=x.target.result;
+      img.style.width='100%';
+      img.style.borderRadius='12px';
+      gal.appendChild(img);
+   };
+   r.readAsDataURL(f);
+ });
+});
+</script>
+</body>
+</html>
