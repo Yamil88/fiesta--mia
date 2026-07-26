@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CEA v1.0</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial;background:#0f172a;color:#fff}
+header{background:#111827;padding:15px;text-align:center}
+#login,#app{max-width:900px;margin:auto;padding:20px}
+.card{background:#1e293b;border-radius:14px;padding:20px;margin:15px 0}
+input{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:none}
+button{padding:10px 16px;border:none;border-radius:8px;background:#22c55e;color:#fff;cursor:pointer}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}
+.page{display:none}.page.active{display:block}
+.bar{height:18px;background:#334155;border-radius:8px;overflow:hidden}
+.fill{height:100%;background:#22c55e;color:#fff;font-size:11px;text-align:right;padding-right:4px}
+.small{opacity:.8;font-size:.9em}
+</style>
+</head>
+<body>
+<header><h1>📊 CEA v1.2</h1><div>Centro de Encuestas Administrativas</div></header>
+
+<div id="login">
+<div class="card">
+<h2>Iniciar sesión</h2>
+<input id="user" placeholder="Usuario">
+<input id="pass" type="password" placeholder="Contraseña">
+<button onclick="login()">Entrar</button>
+<p id="msg" style="color:#fca5a5"></p>
+<p class="small">Cambia las contraseñas en el objeto <b>USERS</b> dentro del script.</p>
+</div>
+</div>
+
+<div id="app" style="display:none">
+<nav>
+<button onclick="show('inicio')">Inicio</button>
+<button onclick="show('encuestas')">Encuestas</button>
+<button onclick="show('estadisticas')">Estadísticas</button>
+<button onclick="show('fundador')">Fundador</button>
+<button onclick="logout()">Cerrar sesión</button>
+</nav>
+
+<div id="inicio" class="page active card">
+<h2>🏠 Bienvenido</h2>
+<p id="welcome"></p>
+<p>👥 <b>Grupo:</b> Los Mejores del Fray</p><p>🟢 Estado: Activo</p>
+</div>
+
+<div id="encuestas" class="page card">
+<h2>🗳️ Encuesta 1</h2>
+<p>¿Generar nuevos grupos?</p>
+<div class="bar"><div class="fill" style="width:67%">67%</div></div>
+<p>✅ Sí: 2 votos (66.7%)<br>❌ No: 1 voto (33.3%)<br><b>Resultado:</b> Aprobada ✅</p>
+<hr>
+<h2>📜 Encuesta 2</h2>
+<p>¿Crear una Constitución?</p>
+<div class="bar"><div class="fill" style="width:33%">33%</div></div>
+<p>✅ Sí: 1 voto (33.3%)<br>➖ Abstenciones: 2 (66.7%)<br>❌ No: 0 votos<br><b>Resultado:</b> Sin votos en contra ✅</p>
+</div>
+
+<div id="estadisticas" class="page card">
+<h2>📈 Estadísticas</h2>
+<ul>
+<li>Administradores: 3</li>
+<li>Encuestas: 2</li>
+<li>Visitas locales: <span id="vis"></span></li>
+</ul>
+</div>
+
+<div id="fundador" class="page card">
+<h2>👑 Panel del Fundador</h2>
+<p>Solo visible si el usuario es <b>YAMIL</b>.</p>
+<div id="fpanel"></div>
+</div>
+</div>
+
+<script>
+const USERS={
+YAMIL:"0477",
+SARA:"0367",
+ISSAC:"0257"
+};
+
+let tries=0;
+localStorage.visitas=(+localStorage.visitas||0)+1;
+document.getElementById("vis").textContent=localStorage.visitas;
+
+function login(){
+ if(tries>=5){msg.textContent="Acceso bloqueado.";return;}
+ let u=user.value.trim().toUpperCase();
+ let p=pass.value;
+ if(USERS[u]&&USERS[u]===p){
+   document.getElementById("login").style.display="none";
+   document.getElementById("app").style.display="block";
+   welcome.textContent="Hola "+u;
+   if(u==="YAMIL"){
+      fpanel.innerHTML="<p>Acceso completo concedido.</p>";
+   }else{
+      fpanel.innerHTML="<p>Sin permisos de fundador.</p>";
+   }
+ }else{
+   tries++;
+   msg.textContent="Usuario o contraseña incorrectos. Intentos: "+tries+"/5";
+ }
+}
+function show(id){
+ document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));
+ document.getElementById(id).classList.add("active");
+}
+function logout(){location.reload();}
+</script>
+</body>
+</html>
