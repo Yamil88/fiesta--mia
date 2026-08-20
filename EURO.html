@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Despedida de Euro 🌕🐟</title>
+<style>
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+    font-family:Georgia,"Times New Roman",serif; color:#17233f;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(255,215,100,.20) 0 2px, transparent 3px),
+      radial-gradient(circle at 80% 30%, rgba(255,255,255,.65) 0 1.5px, transparent 2.5px),
+      linear-gradient(135deg,#f7f1e5,#fffdf8 55%,#eee7d9);
+    overflow:auto;
+  }
+  .card{
+    width:min(92vw,620px); margin:28px auto; padding:12px;
+    border:1px solid #b9974e; box-shadow:0 18px 50px rgba(30,40,70,.18);
+    background:#fffdf8;
+  }
+  .inner{
+    border:2px solid #b9974e; padding:34px 28px 30px; text-align:center;
+    position:relative; overflow:hidden;
+  }
+  .inner:before,.inner:after{
+    content:"✦"; position:absolute; color:#b9974e; font-size:34px; opacity:.7;
+  }
+  .inner:before{top:10px;left:14px}.inner:after{bottom:10px;right:14px}
+  .moon{font-size:42px;margin-bottom:2px}
+  .eyebrow{letter-spacing:4px;font-size:12px;color:#80672e}
+  h1{font-size:42px;letter-spacing:5px;margin:8px 0 0;color:#8c2630}
+  .subtitle{font-style:italic;font-size:18px;margin:4px 0 24px;color:#4e5870}
+  .fish{
+    width:180px;height:180px;margin:0 auto 18px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(circle at 35% 30%,#ff6a67,#b81e2d 52%,#641321);
+    box-shadow:0 10px 28px rgba(120,20,35,.22);
+    font-size:82px;
+  }
+  .message{font-size:16px;line-height:1.65;max-width:500px;margin:0 auto 24px}
+  .details{
+    border-top:1px solid #d8c69b;border-bottom:1px solid #d8c69b;
+    padding:16px 8px;margin:22px 0;text-align:left;
+  }
+  .row{padding:7px 0;font-size:16px}
+  .label{font-weight:bold;color:#80672e}
+  .buttons{display:grid;gap:12px;margin-top:22px}
+  a.button{
+    display:block;text-decoration:none;padding:14px 18px;border-radius:8px;
+    font-family:Arial,sans-serif;font-weight:bold;letter-spacing:.4px;
+    transition:transform .15s,box-shadow .15s;
+  }
+  a.button:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.12)}
+  .confirm{background:#8c2630;color:white}
+  .map{background:#17233f;color:white}
+  .quote{font-style:italic;margin-top:24px;font-size:15px;color:#555e72}
+  .footer{margin-top:18px;font-size:12px;color:#8a806e;letter-spacing:1px}
+</style>
+</head>
+<body>
+<main class="card">
+  <section class="inner">
+    <div class="moon">🌕</div>
+    <div class="eyebrow">CON MUCHO CARIÑO</div>
+    <h1>EURO</h1>
+    <div class="subtitle">Heredera de Júpiter 🪐</div>
+
+    <div class="fish" aria-label="Betta rojo">🐟</div>
+
+    <p class="message">
+      Con cariño, te invitamos a acompañarnos en la despedida de
+      <strong>Euro</strong>, una pequeña compañera que dejó una gran
+      huella en nuestro universo acuático.
+    </p>
+
+    <div class="details">
+      <div class="row"><span class="label">📅 Fecha:</span> 20/08/2026</div>
+      <div class="row"><span class="label">🕐 Hora:</span> 16:00 hrs.</div>
+      <div class="row"><span class="label">📍 Lugar:</span> <strong>Casa Abi</strong></div>
+    </div>
+
+    <div class="buttons">
+      <!-- Cambia el número por el de la persona que recibirá las confirmaciones.
+           Formato internacional, sin +, espacios ni guiones. -->
+      <a class="button confirm"
+         href="https://wa.me/525660594735?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20la%20despedida%20de%20Euro.%20%F0%9F%90%9F%F0%9F%8C%95"
+         target="_blank" rel="noopener">
+        🕊️ CONFIRMAR ASISTENCIA
+      </a>
+
+      <a class="button map"
+         href="https://www.google.com/maps/search/?api=1&query=19.542522,-99.124915469931"
+         target="_blank" rel="noopener">
+        📍 VER UBICACIÓN — CASA ABI
+      </a>
+    </div>
+
+    <div class="quote">“Aunque ya no esté en la pecera, siempre estará en nuestro universo.”</div>
+    <div class="footer">JUPI → EURO → ∞</div>
+  </section>
+</main>
+</body>
+</html>
